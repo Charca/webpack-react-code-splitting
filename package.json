@@ -1,12 +1,37 @@
 {
   "name": "webpack-react-code-splitting",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example Webpack Setup for Multi-Entry Point React Applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.jsx src/",
+    "lint:fix": "eslint --ext .js,.jsx src/ --fix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Maxi Ferreira <charca@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "prettier": "2.3.2",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.2",
+    "webpack-cli": "^4.8.0"
+  }
 }

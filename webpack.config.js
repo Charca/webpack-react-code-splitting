@@ -53,6 +53,16 @@ module.exports = (env) => {
     resolve: {
       extensions: ["", ".js", ".jsx"],
     },
+    optimization: {
+      splitChunks: {
+        chunks: "all",
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+          },
+        },
+      },
+    },
     plugins,
   };
 };

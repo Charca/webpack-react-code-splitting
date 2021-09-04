@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import * as d3 from "d3";
 
 export default function App() {
   return (
@@ -35,6 +36,9 @@ export default function App() {
 }
 
 function Home() {
+  // Here's my "usage" of d3 for this demo.
+  d3.select();
+
   return <h2>Home</h2>;
 }
 

@@ -59,6 +59,7 @@ module.exports = (env) => {
         cacheGroups: {
           vendors: {
             test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
           },
         },
       },

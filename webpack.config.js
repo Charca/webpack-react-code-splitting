@@ -56,12 +56,6 @@ module.exports = (env) => {
     optimization: {
       splitChunks: {
         chunks: "all",
-        cacheGroups: {
-          vendors: {
-            test: /[\\/]node_modules[\\/]/,
-            name: "vendors",
-          },
-        },
       },
     },
     plugins,

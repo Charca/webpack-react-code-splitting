@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 import * as d3 from "d3";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <Router basename="users">
       <div>
         <h1>Dashboard App</h1>
+        <Button color="primary">Hello World</Button>
         <nav>
           <ul>
             <li>

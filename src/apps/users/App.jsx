@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 export default function App() {
   return (
     <Router basename="users">
       <div>
         <h1>Users App</h1>
+        <Button color="primary">Hello World</Button>
         <nav>
           <ul>
             <li>

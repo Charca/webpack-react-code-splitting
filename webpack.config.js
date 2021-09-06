@@ -56,6 +56,13 @@ module.exports = (env) => {
     optimization: {
       splitChunks: {
         chunks: "all",
+        cacheGroups: {
+          "react-vendor": {
+            test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|history)[\\/]/,
+            name: "react-vendor",
+            chunks: "all",
+          },
+        },
       },
     },
     plugins,

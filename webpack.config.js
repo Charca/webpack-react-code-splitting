@@ -54,13 +54,22 @@ module.exports = (env) => {
       extensions: ["", ".js", ".jsx"],
     },
     optimization: {
+      runtimeChunk: "single",
       splitChunks: {
         chunks: "all",
+        maxAsyncRequests: 100,
+        maxInitialRequests: 100,
+        minSize: 2000,
         cacheGroups: {
-          "react-vendor": {
-            test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|history)[\\/]/,
-            name: "react-vendor",
-            chunks: "all",
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: function (module) {
+              const packageName = module.context.match(
+                /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+              )[1];
+
+              return `npm.${packageName.replace("@", "")}`;
+            },
           },
         },
       },
